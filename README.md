@@ -1,5 +1,7 @@
 # RevReveal
 
+<img src = "RevReveal/images/logo.png">
+
 <p>RevReveal is an AI-powered website that helps everyday people to save money by diagnosing their car's problems with no physical requirements! All you need to do is navigate to /home, and start searching your problems!</p>
 
 # File Structure
