@@ -68,6 +68,33 @@ label {
     margin-top: 1.1%;
 }
 
+#gallery {
+    margin-top: 5%;
+    margin-left: 42%;
+    background-color:#17252A;
+    text-align: center;
+    color: white;
+    width: 15%;
+    height: 5%;
+    border: .2px solid white;
+}
+
+.slideshow {
+    width: 100%;
+    display: none;
+    object-fit: contain; /* so image covers whole div space */
+}
+
+summary {
+    font-size: 2vh;
+    padding-top: 3vh;
+}
+
+details {
+    padding-top: 2vh;
+    font-size: 1.5vh;
+}
+
 #logo-top {
     display: inline-block;
     width: 5%;
