@@ -6,6 +6,7 @@
 
 # File Structure
 <ul>
+  <li>scripts - contains the javascript files</li>
   <li>images - all of the images currently being displayed</li>
   <li>favicons - the favicons to display depending on the browser</li>
   <li>about.html - overview of RevReveal</li>
