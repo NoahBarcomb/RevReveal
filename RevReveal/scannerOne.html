@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>RevReveal - Purchase a scanner now!</title>
+    <title>RevReveal - Purchase Now!</title>
     <link rel="stylesheet" href="project.css">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Purchase a scanner here.">
+    <script src="https://www.paypal.com/sdk/js?client-id=AeZEUMJsV0E4ZZNok1HHDs9oI2rjKPyDm5XUUuSr5PvcHwjWfqK-ZM6u0aNciyexxNnRDTw9f22gi4TH&currency=USD"></script>
+    <script src="scripts/cart.js"></script>
     <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
@@ -16,50 +18,65 @@
         <header>
             <img id="logo-top" src="images/logo.png" alt="RevReveal Logo">
             <h1>RevReveal</h1>
+            <div class="cart-icon" onclick="showCartDetails()">
+                🛒
+                <span id="cart-badge" class="cart-badge">0</span>
+            </div>
             <nav aria-label="Main Navigation">
                 <ul>
-                    <li><a href = "about.html">About Us</a></li>
-                    <li><a href = "getstarted.html">Get Started</a></li>
-                    <li><a href = "ScannerOne.html">Personal Use</a></li>
-                    <li><a href = "scannerTwo.html">Enterprise Use</a></li>
-                    <li><a href = "home.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="getstarted.html">Get Started</a></li>
+                    <li><a href="ScannerOne.html">Personal Use</a></li>
+                    <li><a href="scannerTwo.html">Enterprise Use</a></li>
+                    <li><a href="home.html">Home</a></li>
                 </ul>
             </nav>
         </header>
-        <div id = "middle">
-            <h2>Entry-Level Scanner</h2>
-            <div id = "scanner-info">
-            <img id = "entry-level-image" src = "images/personal-scanner.jpg" alt = "Entry Level Scanner Image">
-
-            <p id = "entry-level-paragraph">
-                The SmartScan P1 is a cutting-edge OBD2 scanner designed for personal use, integrating advanced AI technology to provide accurate and efficient vehicle diagnostics. With its user-friendly interface, the SmartScan P1 connects seamlessly to your smartphone via Bluetooth, offering real-time data and insights. The AI engine analyzes the vehicle’s data, identifying potential issues and suggesting solutions, making it easy for car owners to understand and address problems without needing extensive mechanical knowledge. Whether it’s a simple check engine light or a more complex issue, the SmartScan P1 empowers users to maintain their vehicles with confidence.
+        
+        <div id="middle">
+            <h2>Personal-Level Scanner</h2>
+            <div id="scanner-info">
+                <img id="enterprise-level-image" src="images/personal-scanner.jpg" alt="Personal Level Scanner Image">
+                <p id="enterprise-level-paragraph">
+                    The SmartScan P1 is designed for personal use, providing easy-to-use diagnostic features powered by AI. Ideal for individual car owners, the SmartScan P1 offers quick vehicle health checks, troubleshooting guidance, and maintenance reminders. With its intuitive interface, the SmartScan P1 enables users to understand their vehicle’s condition and address potential issues before they become major problems, helping to ensure safety and minimize repair costs.
+                </p>
+                <button class = "purchase-button" onclick="addToCart('SmartScan E0', 499.99)">Add to Cart - $499.99</button>
             </div>
         </div>
-        <footer>
-            <section id = "footer-portion">
-            <h3>RevReveal</h3>
-            <img id = "logo-bottom" src="images/logo.png" alt="RevReveal Logo">
-            <nav>
-            <ul>
-                <li><a href = "mailto:support@revreveal.com">Contact Us</a></li>
-                <li><a href="faq.html">FAQ</a></li>
-            </ul>
-        </nav>
-    </section>
-    <section id = "footer-portion-two">
-        <h2>Find Us Here</h2>
-    
-                <div class = "social-media-section">
-                    <img class = "social-media-logo" src = "images/instagram.jpg" alt = "">
-                <a class = "social-media-link" href = "https://twitter.com/RevReveal">https://twitter.com/RevReveal</a>
-                </div>
-            <div>
-                <img class = "social-media-logo" id = "social-media-twitter-logo" src = "images/twitter.jpg" alt = "">
-                <a class = "social-media-link" href = "https://instagram.com/RevReveal">https://instagram.com/RevReveal</a>
-            </div>
-    
-    </section>
-        </footer>
+
+        <!-- Cart Details Modal -->
+        <div id="cart-overlay" onclick="closeCartDetails()"></div>
+        <div id="cart-details">
+            <h3>Your Cart</h3>
+            <ul id="cart-items"></ul>
+            <p id="cart-total">Total: $0.00</p>
+            <div id="paypal-button-container"></div> <!-- PayPal button container -->
+            <button onclick="closeCartDetails()">Close</button>
+        </div>
     </main>
+
+    <footer>
+        <section id="footer-portion">
+            <h3>RevReveal</h3>
+            <img id="logo-bottom" src="images/logo.png" alt="RevReveal Logo">
+            <nav>
+                <ul>
+                    <li><a href="mailto:support@revreveal.com">Contact Us</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                </ul>
+            </nav>
+        </section>
+        <section id="footer-portion-two">
+            <h2>Find Us Here</h2>
+            <div class="social-media-section">
+                <img class="social-media-logo" src="images/instagram.jpg" alt="">
+                <a class="social-media-link" href="https://twitter.com/RevReveal">https://twitter.com/RevReveal</a>
+            </div>
+            <div>
+                <img class="social-media-logo" id="social-media-twitter-logo" src="images/twitter.jpg" alt="">
+                <a class="social-media-link" href="https://instagram.com/RevReveal">https://instagram.com/RevReveal</a>
+            </div>
+        </section>
+    </footer>
 </body>
 </html>
