@@ -4,6 +4,7 @@
     <title>RevReveal - Account</title>
     <link rel="stylesheet" href="project.css">
     <meta charset="utf-8">
+    <script src = "scripts/form-validation.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Manage your RevReveal account with ease and access personalized car diagnostic insights powered by advanced AI technology. The Account page provides users with a secure platform to view diagnostic history, track vehicle health, and access tailored maintenance recommendations for optimal car performance. Whether you are a mechanic, car enthusiast, or everyday driver, RevReveal's account portal keeps you informed with up to date insights, allowing you to monitor your vehicle's condition and streamline maintenance. Discover how our AI driven diagnostics can enhance your automotive experience and make staying on top of car care simple and efficient. Log in to stay connected with your car's needs through RevReveal.">
     <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon.png">
@@ -35,7 +36,7 @@
 
             <section id = "password-reset">
                 <h2 id = "reset-password-label">Reset Password</h2>
-                <form id = "password-reset-form" action = "https://webdevbasics.net/scripts/demo.php" method = "POST">
+                <form name = "password-reset-form-js" id = "password-reset-form" onsubmit = "return validatePassword()" action = "https://webdevbasics.net/scripts/demo.php" method = "POST">
                     <input type = "text" class = "reset-field" name = "current-password" placeholder = "Current Password">
                     <input type = "text" class = "reset-field" name = "new-password" placeholder = "New Password">
                     <input type = "text" class = "reset-field" name = "new-confirm-password" placeholder = "Confirm New Password">
