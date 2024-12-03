@@ -23,5 +23,7 @@
   <li>signup.html - signup page</li>
 </ul>
 
-As this is not a live website, after signing up and/or logging in, you will be redirected to dashboard.html (/dashboard) which will then treat you as if you have an account.
+As this is not a live website, after signing up and/or logging in, you will be redirected to dashboard.html (/dashboard) which will then treat you as if you have an account. <br>
+
+Since there is no database, when an item is added to the cart, it persists using browser cache, which can be cleared by clearing your history.
 
